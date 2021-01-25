@@ -11,7 +11,7 @@ $normalTextSize: 14px;
 .site-summary {
   color: $themeFontColor;
 
-  p {
+  p:not(.small) {
     margin: 0;
     font-size: $normalTextSize;
   }

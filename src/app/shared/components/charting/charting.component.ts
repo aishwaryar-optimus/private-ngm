@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import highChartmore from 'highcharts/highcharts-more';
 import Exporting from 'highcharts/modules/exporting';
@@ -12,7 +12,7 @@ import noData from 'highcharts/modules/no-data-to-display';
   templateUrl: './charting.component.html',
   styleUrls: ['./charting.component.scss']
 })
-export class ChartingComponent implements OnChanges {
+export class ChartingComponent {
   @Input() chartConstructor;
   @Input() oneToOneFlag;
   @Input() chartOptions: Highcharts.Options = {};
@@ -35,21 +35,5 @@ export class ChartingComponent implements OnChanges {
     offlineExport(Highcharts);
     boost(Highcharts);
     noData(Highcharts);
-  }
-
-  ngOnChanges(event) {
-    console.log(
-      this.chartConstructor,
-      this.oneToOneFlag,
-      this.chartOptions,
-      this.chartType,
-      this.dataChange,
-      this.id
-    );
-    this.chartOptions = this.chartOptions;
-    if (this.dataChange) {
-      // this.chartOptions.series
-      this.updateFlag = true;
-    }
   }
 }
