@@ -1,0 +1,18 @@
+$themeFontColor: #0e89df;
+$normalTextSize: 14px;
+//CSS for all the chart headings
+
+.heading {
+  color: #60a8c4;
+  font-family: 'Arial Narrow', sans-serif;
+  text-align: center;
+}
+
+.site-summary {
+  color: $themeFontColor;
+
+  p {
+    margin: 0;
+    font-size: $normalTextSize;
+  }
+}

@@ -1,1 +1,74 @@
-<p>site-summary works!</p>
+<div class="mainContainer">
+  <div class="container">
+    <div class="row pt-2">
+      <nav class="navbar pb-0 col">
+        <div class="container">
+          <a class="h6 pointer">
+            Summary
+          </a>
+          <!-- <div class="ml-auto inline-flex">
+            <a class="mr-3 pointer">
+              <select class="form-control initial_width" name="site" id="">
+                <option value="">View All</option>
+              </select>
+            </a>
+            <a class="mr-3 pointer">
+              <button routerLink="add-site" class="btn btn-special">ADD SITE</button>
+            </a>
+          </div> -->
+        </div>
+      </nav>
+    </div>
+
+    <!-- main content of page will start from here -->
+    <div class="row p-4">
+      <!-- left side of the page -->
+      <div class="col">
+        <!-- row1 -->
+        <div class="row my-3 p-4" style="background: #f1f9ff;">
+          <div class="col-sm-6 p-0 site-summary">
+            <h5>SymPRO Crow's Nest</h5>
+            <p class="small">0001001</p>
+            <p>Project: project A</p>
+            <p>Description: NRG Test Site</p>
+            <p>Commission Date: 08/31/20</p>
+            <p>Longitude: 44338</p>
+            <p>Latitude: -73.111</p>
+            <p>Elevation: 122m</p>
+            <p>Time Zone: UTC -5:00 </p>
+          </div>
+
+          <div class="col-sm-6 p-0">
+            <p>For map</p>
+          </div>
+        </div>
+        <!-- row2 -->
+        <h6 class="heading">Monthly Average Temperature</h6>
+        <div class="row my-3 p-4" style="background: #eeeeee;">
+          <app-charting [id]="'line_1'" [chartConstructor]="'chart'" [oneToOneFlag]="oneToOneFlag"
+            [chartOptions]="chartOptionsOne" [chartType]="'line'" [dataChange]="dataChange">
+          </app-charting>
+        </div>
+      </div>
+
+      <!-- right side of the page -->
+      <div class="col mt-5">
+        <!-- row1 -->
+        <h6 class="heading">Wind Direction</h6>
+        <div class="p-4 my-3" style="background: #eeeeee;">
+          <app-charting [id]="'polar_1'" [chartConstructor]="'chart'" [oneToOneFlag]="oneToOneFlag"
+            [chartOptions]="chartOptionsTwo" [chartType]="'polar'" [dataChange]="dataChange">
+          </app-charting>
+        </div>
+        <!-- row2 -->
+
+        <h6 class="heading">Humidity</h6>
+        <div class="p-4 my-3" style="background: #eeeeee;">
+          <app-charting [id]="'area_1'" [chartConstructor]="'chart'" [oneToOneFlag]="oneToOneFlag"
+            [chartOptions]="chartOptionsThree" [chartType]="'area'" [dataChange]="dataChange">
+          </app-charting>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
