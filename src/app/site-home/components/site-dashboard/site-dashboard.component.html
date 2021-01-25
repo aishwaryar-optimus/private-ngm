@@ -1,0 +1,58 @@
+<div class="mainContainer">
+  <div class="container tableContainer">
+    <div class="row pt-2">
+      <nav class="navbar pb-0 col">
+        <div class="container">
+          <a class="h6 pointer">
+            Sites
+          </a>
+          <!-- <div class="col"></div> -->
+          <div class="ml-auto inline-flex">
+            <a class="mr-3 pointer">
+              <select class="form-control initial_width" name="site" id="">
+                <option value="">View All</option>
+              </select>
+            </a>
+            <a class="mr-3 pointer">
+              <button routerLink="add-site" class="btn btn-special">ADD SITE</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="row pt-4">
+      <div class="col">
+        <div class="table-responsive-md ">
+          <table class="table table-hover table-striped text-center site-table">
+            <thead>
+              <tr class="table-dark">
+                <th width="">Project Name </th>
+                <th width="">Site Name </th>
+                <th width="">Instrumentation </th>
+                <th width="">Last Connection </th>
+                <th width="">Active Events</th>
+                <th width="">Battery</th>
+                <th width="">Location</th>
+                <th width="">Data</th>
+                <th width="">firmware</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="siteData.length > 0">
+              <tr *ngFor="let site of siteData">
+                <td>{{site.project_name}}</td>
+                <td>{{site.site_name}}</td>
+                <td>{{site.instrumentation}}</td>
+                <td>{{site.last_connection | date}}</td>
+                <td>{{site.active_events}}</td>
+                <td>{{site.battery}}</td>
+                <td>{{site.location}}</td>
+                <td>{{site.data | date}}</td>
+                <td>{{site.firmware}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

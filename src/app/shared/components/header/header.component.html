@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg pt-sm-3 pb-sm-3 pb-0 navbar-top navbar-top-new header">
+  <div class="container">
+    <a class="h6  text-white pointer">
+      NRG Systems
+    </a>
+    <div class="col justify-content-center search-div">
+      <form class="search-input-form" [formGroup]="searchForm">
+        <div class="input-group">
+          <input class="form-control " type="search" aria-label="Search" aria-describedby="basic-addon1"
+            formControlName="search" placeholder="Search" style="-webkit-appearance:none;" />
+        </div>
+      </form>
+    </div>
+    <div class="ml-auto">
+      <a class="mr-3 text-white pointer">
+        <i class="fa fa-search">icon</i>
+      </a>
+      <a class="mr-3 text-white pointer">
+        <i class="fa fa-search">icon</i>
+      </a>
+      <a class="mr-3 text-white pointer">
+        <i class="fa fa-search">icon</i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-bottom navbar-new header pb-0">
+  <div class="w-100">
+    <div class="container">
+      <div class="row w-100">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          <ul class="navbar-nav my-lg-0 w-100 justify-content-center">
+            <li class="nav-item mr-3">
+              <a class="nav-link p-2" routerLink="/fleet-view">HOME</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link p-2" routerLink="/site-home">SITES</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link p-2" routerLink="/events">EVENTS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

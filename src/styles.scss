@@ -1,0 +1,120 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+$fontFamily: "Avenir LT Std 65 Medium";
+$bodyBg: #fafafa;
+$buttonColor: #0fd6dd;
+$cancelBtnColor: #7a6e6e;
+
+$themeColor: #2699fb;
+$themeFontColor: #0e89df;
+$secondaryColor: #f1f8fe;
+$inputBGColor: #f1f9ff;
+$borderColor: #bce0fd;
+
+
+.theme_color {
+  color: $themeColor;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.theme-hr {
+  border-top: 1px solid $themeColor;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.full-height {
+  overflow: hidden;
+  height: 100%;
+}
+
+.full_view_height {
+  height: 100vh;
+}
+
+.input_label {
+  color: $themeColor;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-control {
+  background-color: $inputBGColor !important;
+  font-size: 12px !important;
+  color: $themeColor !important;
+  border: 1px solid $borderColor !important;
+}
+
+.small_link {
+  font-size: 11px;
+  text-decoration: underline;
+  color: $themeColor;
+  font-weight: 600;
+}
+
+.side_announcement_area {
+  background-color: $secondaryColor;
+}
+
+.btn-special {
+  background-color: $themeColor !important;
+  color: white !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.btn-secondary {
+  background-color: $inputBGColor !important;
+  color: $themeColor !important;
+  font-size: 12px !important;
+  text-align: center !important
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+.content_area {
+  bottom: 0;
+  position: fixed;
+  min-width: 30vw;
+}
+
+.error {
+  font-size: 12px;
+  color: rgb(250, 127, 127);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.header {
+  background: $themeColor;
+}
+
+.site-table {
+  th {
+    background-color: $themeColor !important;
+    padding: 4px !important;
+    font-size: 13px;
+  }
+
+  td {
+    border: 2px solid white;
+    padding: 4px !important;
+    background: #f1f9ff;
+    font-size: 12px;
+    font-weight: 600;
+    color: $themeFontColor;
+  }
+}

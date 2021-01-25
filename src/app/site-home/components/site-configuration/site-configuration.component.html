@@ -1,0 +1,68 @@
+<!-- <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <div class="p-4">
+      <h5 class="mt-4">Site Configuration</h5>
+
+      <div class="row topMargin mb-3 text-center">
+        <div class="col text-center">
+          <div class="mb-3">
+            <span>
+              <span class="btn btn-primary pointer"
+                style="background-color: #4477f2; border-color: #4477f2;font-size: 18px;" (click)="fbLogin()"><i
+                  class="fa fa-facebook"
+                  style=" width: 27px; height: 27px; background: #ffffff; color: #4477f2; border-radius: 210px; font-size: 20px; line-height: 27px;"></i>
+                Login with Facebook </span>
+            </span>
+          </div>
+          <h4 class="col-12 w-100 mb-2">OR</h4>
+        </div>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group ml-10 bottomMargin ">
+          <input type="email" id="email" class="form-control" placeholder="Email Address" formControlName="email">
+          <div *ngIf="submittedmsg && loginForm.controls.email.errors" class="error">
+            <div *ngIf="loginForm.controls.email.errors.required">
+              This field is required
+            </div>
+            <div *ngIf="loginForm.controls.email.errors.pattern">
+              Enter a valid email address
+            </div>
+          </div>
+        </div>
+        <div class="form-group bottomMargin">
+          <input type="password" class="form-control" placeholder="Password" formControlName="password">
+          <div *ngIf="submittedmsg && loginForm.controls.password.errors" class="error">
+            <div *ngIf="loginForm.controls.password.errors.required">
+              This field is required
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6">
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+              <label class="custom-control-label forgotPassword" for="customCheck1">Remember Me</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <a style=" font-size: 17px; float: right;" class="forgotPassword" routerLink="/forget-password">Forgot
+              Password?</a>
+          </div>
+        </div>
+        <div class="row mt-1 mb-1">
+          <div class="col-6 mt-2">
+            <button type="submit" class="btn btn-special">Login</button>
+          </div>
+          <div class="col-6 mt-2">
+            <button type="button" routerLink="/signup" class="btn signupBtn">Sign Up</button>
+          </div>
+        </div>
+
+
+
+      </form>
+    </div>
+  </div>
+</div> -->
