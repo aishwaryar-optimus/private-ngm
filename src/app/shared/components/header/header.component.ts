@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -9,23 +9,23 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 export class HeaderComponent implements OnInit {
 
   showSearch = false;
-  sideMenu: boolean = false;
+  sideMenu = false;
   searchForm: FormGroup;
-  showSearchDropdown: boolean = false;
+  showSearchDropdown = false;
 
   constructor(
     private formBuilder: FormBuilder,
   ) {
     this.searchForm = this.formBuilder.group({
-      search: ["", [Validators.required]]
-    })
+      search: ['', [Validators.required]]
+    });
   }
 
   ngOnInit() { }
 
   search(code) {
     if ((code === 13 || code == undefined) && this.searchForm.valid) {
-      console.log("navigate to search result")
+      console.log('navigate to search result');
     }
     this.showSearchDropdown = true;
   }

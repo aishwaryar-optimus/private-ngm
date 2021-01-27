@@ -1,0 +1,46 @@
+<div class="full-height">
+    <div class="row full_view_height">
+        <div class="col-sm-7 side_announcement_area"></div>
+        <div class="col-sm-5">
+            <div class="p-5 content_area">
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label class="input_label">E-mail</label>
+                        <input type="email" class="form-control" placeholder="Email Address" formControlName="email">
+                        <div *ngIf="submittedmsg && loginForm.controls.email.errors" class="error">
+                            <div *ngIf="loginForm.controls.email.errors.required">
+                                This field is required
+                            </div>
+                            <div *ngIf="loginForm.controls.email.errors.pattern">
+                                Enter a valid email address
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="input_label">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                        <div *ngIf="submittedmsg && loginForm.controls.password.errors" class="error">
+                            <div *ngIf="loginForm.controls.password.errors.required">
+                                This field is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-special" (click)="login()">LOGIN</button>
+                        </div>
+                    </div>
+                    <div class="row mt-5 pt-3">
+                        <div class="col-6">
+                            <a class="small_link" routerLink="/signup">New Account</a>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a class="small_link" routerLink="/forget-password">Forgot Password</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

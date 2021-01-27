@@ -1,7 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ForgetPasswordComponent } from './core/components/forget-password/forget-password.component';
+import { LoginComponent } from './core/components/login/login.component';
+import { SignupComponent } from './core/components/signup/signup.component';
 
 const routes: Routes = [
+    {
+        path: 'login',
+        component: LoginComponent,
+    },
+    {
+        path: 'signup',
+        component: SignupComponent,
+    },
+    {
+        path: 'forget-password',
+        component: ForgetPasswordComponent,
+    },
     {
         path: 'fleet-view',
         loadChildren: () => import('./fleet-view/fleet-view.module').then(m => m.FleetViewModule)
@@ -21,11 +36,12 @@ const routes: Routes = [
     {
         path: 'data-manager',
         loadChildren: () => import('./data-manager/data-manager.module').then(m => m.DataManagerModule)
-    }
+    },
+    { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

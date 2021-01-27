@@ -5,17 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
-
+import { LoginComponent } from './core/components/login/login.component';
+import { SignupComponent } from './core/components/signup/signup.component';
+import { ForgetPasswordComponent } from './core/components/forget-password/forget-password.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgetPasswordComponent
   ],
   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      CoreModule,
-      SharedModule
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
