@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FleetViewRoutingModule } from './fleet-view-routing.module';
 import { OverviewComponent } from './components/overview/overview.component';
 import { SharedModule } from '../shared/shared.module';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -11,7 +12,10 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     FleetViewRoutingModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDTJcEGRDBuB-Ir8zXyMDnBy05MneAtzfU'
+    })
   ]
 })
 export class FleetViewModule { }
