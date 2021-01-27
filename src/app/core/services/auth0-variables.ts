@@ -8,8 +8,8 @@ interface AuthConfig {
 }
 
 export const AUTH_CONFIG: AuthConfig = {
-  clientID: 'OtzXaYOxRZAYv2meHg9N8wl3HWVDts75',
-  domain: 'vaibhav-optimus.us.auth0.com',
+  clientID: '',
+  domain: '',
   callbackURL: 'http://localhost:4200',
   silentCallbackURL: 'http://localhost:3001/silent',
   audience: '{API_IDENTIFIER}',
