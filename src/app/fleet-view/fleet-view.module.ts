@@ -14,7 +14,6 @@ import { AgmCoreModule } from '@agm/core';
     FleetViewRoutingModule,
     SharedModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDTJcEGRDBuB-Ir8zXyMDnBy05MneAtzfU'
     })
   ]
 })
