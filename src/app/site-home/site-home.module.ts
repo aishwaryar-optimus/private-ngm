@@ -9,13 +9,17 @@ import { SharedModule } from '../shared/shared.module';
 import { AddSiteComponent } from './components/add-site/add-site.component';
 import { SiteConfigurationComponent } from './components/site-configuration/site-configuration.component';
 import { SiteSummaryComponent } from './components/site-summary/site-summary.component';
+import { AddSiteStepOneComponent } from './components/add-site-step-one/add-site-step-one.component';
+import { AddSiteStepTwoComponent } from './components/add-site-step-two/add-site-step-two.component';
 
 @NgModule({
   declarations: [
     SiteDashboardComponent,
     AddSiteComponent,
     SiteConfigurationComponent,
-    SiteSummaryComponent
+    SiteSummaryComponent,
+    AddSiteStepOneComponent,
+    AddSiteStepTwoComponent
   ],
   imports: [
     CommonModule,
@@ -25,4 +29,4 @@ import { SiteSummaryComponent } from './components/site-summary/site-summary.com
     ReactiveFormsModule
   ]
 })
-export class SiteHomeModule {}
+export class SiteHomeModule { }

@@ -29,7 +29,7 @@ $borderColor: #bce0fd;
 }
 
 .inline-flex {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .full-height {
@@ -41,10 +41,18 @@ $borderColor: #bce0fd;
   height: 100vh;
 }
 
+.width-100 {
+  width: 100% !important;
+}
+
 .input_label {
   color: $themeColor;
   font-size: 12px;
   font-weight: bold;
+}
+
+.font-10px {
+  font-size: 10px;
 }
 
 .form-control {
@@ -70,13 +78,16 @@ $borderColor: #bce0fd;
   color: white !important;
   font-size: 12px !important;
   text-align: center !important;
+  min-width: 90px;
 }
 
 .btn-secondary {
   background-color: $inputBGColor !important;
   color: $themeColor !important;
   font-size: 12px !important;
-  text-align: center !important
+  text-align: center !important;
+  border: none;
+  min-width: 90px;
 }
 
 .container {
@@ -117,4 +128,18 @@ $borderColor: #bce0fd;
     font-weight: 600;
     color: $themeFontColor;
   }
+}
+
+.doted-border-div {
+  border: 2px dotted $themeColor;
+  border-radius: 10px;
+  background-color: $inputBGColor;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 130px;
+  width: 130px;
+  font-size: 12px;
+  font-weight: 700;
+  color: $themeColor;
 }
