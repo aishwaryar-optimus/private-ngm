@@ -12,6 +12,8 @@ import { SiteSummaryComponent } from './components/site-summary/site-summary.com
 import { SummaryTableComponent } from './components/site-summary/summary-table/summary-table.component';
 import { ChannelTableComponent } from './components/site-summary/channel-table/channel-table.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { AddSiteStepOneComponent } from './components/add-site-step-one/add-site-step-one.component';
+import { AddSiteStepTwoComponent } from './components/add-site-step-two/add-site-step-two.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
     SiteConfigurationComponent,
     SiteSummaryComponent,
     SummaryTableComponent,
-    ChannelTableComponent
+    ChannelTableComponent,
+    AddSiteStepOneComponent,
+    AddSiteStepTwoComponent
   ],
   imports: [
     CommonModule,

@@ -42,10 +42,18 @@ $smallIconsFontSize: 16px;
   height: 100vh;
 }
 
+.width-100 {
+  width: 100% !important;
+}
+
 .input_label {
   color: $themeColor;
   font-size: 12px;
   font-weight: bold;
+}
+
+.font-10px {
+  font-size: 10px;
 }
 
 .form-control {
@@ -71,6 +79,7 @@ $smallIconsFontSize: 16px;
   color: white !important;
   font-size: 12px !important;
   text-align: center !important;
+  min-width: 90px;
 }
 
 .btn-secondary {
@@ -78,6 +87,8 @@ $smallIconsFontSize: 16px;
   color: $themeColor !important;
   font-size: 12px !important;
   text-align: center !important;
+  border: none;
+  min-width: 90px;
 }
 
 .container {
@@ -118,6 +129,20 @@ $smallIconsFontSize: 16px;
     font-weight: 600;
     color: $themeFontColor;
   }
+}
+
+.doted-border-div {
+  border: 2px dotted $themeColor;
+  border-radius: 10px;
+  background-color: $inputBGColor;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 130px;
+  width: 130px;
+  font-size: 12px;
+  font-weight: 700;
+  color: $themeColor;
 }
 
 // site summary and related pages css starts

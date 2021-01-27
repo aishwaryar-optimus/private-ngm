@@ -9,6 +9,9 @@ import { SiteFilterComponent } from './components/site-filter/site-filter.compon
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { RouterModule } from '@angular/router';
 import { ChartingComponent } from './components/charting/charting.component';
+import { SearchComponent } from './components/search/search.component';
+import { AlertComponent } from './components/alert/alert.component';
+import { DataManagementComponent } from './components/data-management/data-management.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
@@ -17,7 +20,10 @@ import { HighchartsChartModule } from 'highcharts-angular';
     FooterComponent,
     SiteFilterComponent,
     FeedbackComponent,
-    ChartingComponent
+    ChartingComponent,
+    SearchComponent,
+    AlertComponent,
+    DataManagementComponent
   ],
   imports: [
     CommonModule,
@@ -34,4 +40,4 @@ import { HighchartsChartModule } from 'highcharts-angular';
     ChartingComponent
   ]
 })
-export class SharedModule {}
+export class SharedModule { }
