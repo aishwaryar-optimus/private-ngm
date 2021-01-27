@@ -9,20 +9,26 @@ import { SharedModule } from '../shared/shared.module';
 import { AddSiteComponent } from './components/add-site/add-site.component';
 import { SiteConfigurationComponent } from './components/site-configuration/site-configuration.component';
 import { SiteSummaryComponent } from './components/site-summary/site-summary.component';
+import { SummaryTableComponent } from './components/site-summary/summary-table/summary-table.component';
+import { ChannelTableComponent } from './components/site-summary/channel-table/channel-table.component';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
   declarations: [
     SiteDashboardComponent,
     AddSiteComponent,
     SiteConfigurationComponent,
-    SiteSummaryComponent
+    SiteSummaryComponent,
+    SummaryTableComponent,
+    ChannelTableComponent
   ],
   imports: [
     CommonModule,
     SiteHomeRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxDaterangepickerMd.forRoot()
   ]
 })
 export class SiteHomeModule {}

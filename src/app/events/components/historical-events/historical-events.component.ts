@@ -6,10 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./historical-events.component.scss']
 })
 export class HistoricalEventsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  selected = {};
+  opens;
+  drops;
+  eventTableData = [];
+  constructor() {
+    this.selected['startDate'] = new Date();
+    this.selected['endDate'] = new Date();
+    this.opens = 'left';
+    this.drops = 'down';
   }
 
+  ngOnInit(): void {
+    this.getEventsTable();
+  }
+
+  getEventsTable() {
+    for (let i = 0; i < 20; i++) {
+      let obj = {
+        date_time: new Date().toDateString(),
+        project: 'Project A',
+        site: 'Site 001',
+        category: 'channel' + i + 1,
+        details: 'unexpected wind speed'
+      };
+      this.eventTableData.push(obj);
+    }
+  }
+
+  datesUpdated(e) {
+    console.log(e);
+  }
 }
