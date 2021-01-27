@@ -1,7 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
+// Core Modules
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
+
+// Components and Services
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -12,12 +13,29 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  submittedmsg = false;
+  submittedMsg = false;
 
+  /**
+   * Angular LifeCycle
+   * @param auth AuthService
+   * @param formBuilder FormBuilder
+   */
   constructor(
-    private formBuilder: FormBuilder,
     public auth: AuthService,
-  ) {
+    private formBuilder: FormBuilder,
+  ) { }
+
+  /**
+   * Angular LifeCycle
+   */
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  /**
+   * Initialize form
+   */
+  initForm(): void {
     this.loginForm = this.formBuilder.group({
       email: [
         '',
@@ -28,23 +46,17 @@ export class LoginComponent implements OnInit {
       ],
       password: ['', [Validators.required]]
     });
-    // this.auth.handleAuthentication();
   }
 
-  ngOnInit(): void {
-  }
-
-  // onSubmit() {
-  //   this.submittedmsg = true;
-  //   if (this.loginForm.invalid) {
-  //     return;
-  //   }
-
-  //   this._router.navigate(['/home']);
-  //   console.log(this.loginForm.value);
-  // }
-
-  login(): any {
+  /**
+   * Submit the form
+   */
+  onSubmit(): void {
+    this.submittedMsg = true;
+    if (this.loginForm.invalid) {
+      return;
+    }
+    console.log(this.loginForm.value);
     this.auth.login(this.loginForm.value);
   }
 }

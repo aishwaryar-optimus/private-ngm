@@ -1,6 +1,8 @@
+// Core Modules
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+
+// Components and Services
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -11,14 +13,29 @@ import { AuthService } from '../../services/auth.service';
 export class SignupComponent implements OnInit {
 
   signupForm: FormGroup;
-  submittedmsg = false;
+  submittedMsg = false;
 
+  /**
+   * Angular LifeCycle
+   * @param auth AuthService
+   * @param formBuilder FormBuilder
+   */
   constructor(
-    private formBuilder: FormBuilder,
-    private _router: Router,
     public auth: AuthService,
-  ) {
+    private formBuilder: FormBuilder,
+  ) { }
 
+  /**
+   * Angular LifeCycle
+   */
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  /**
+   * Initialize form
+   */
+  initForm(): void {
     this.signupForm = this.formBuilder.group({
       email: [
         '',
@@ -32,16 +49,14 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  onSubmit() {
-    this.submittedmsg = true;
+  /**
+   * Submit the form
+   */
+  onSubmit(): any {
+    this.submittedMsg = true;
     if (this.signupForm.invalid) {
       return;
     }
     // this.auth.signup(this.signupForm.value);
-    // this._router.navigate(['/home']);
   }
-
 }

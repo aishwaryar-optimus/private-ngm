@@ -1,6 +1,6 @@
+// Core Modules
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forget-password',
@@ -10,12 +10,27 @@ import { Router } from '@angular/router';
 export class ForgetPasswordComponent implements OnInit {
 
   forgotPasswordForm: FormGroup;
-  submittedmsg = false;
+  submittedMsg = false;
 
+  /**
+   * Angular LifeCycle
+   * @param formBuilder FormBuilder
+   */
   constructor(
     private formBuilder: FormBuilder,
-    private _router: Router,
-  ) {
+  ) { }
+
+  /**
+   * Angular LifeCycle
+   */
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  /**
+   * Initialize form
+   */
+  initForm(): void {
     this.forgotPasswordForm = this.formBuilder.group({
       email: [
         '',
@@ -27,17 +42,13 @@ export class ForgetPasswordComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
-
-  onSubmit() {
-    this.submittedmsg = true;
+  /**
+   * Submit the form
+   */
+  onSubmit(): void {
+    this.submittedMsg = true;
     if (this.forgotPasswordForm.invalid) {
       return;
     }
-    // this._router.navigate(['/update-password'])
-    // console.log(this.forgotPasswordForm.value)
   }
-
-
 }

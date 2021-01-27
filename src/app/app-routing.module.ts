@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ForgetPasswordComponent } from './core/components/forget-password/forget-password.component';
-import { LoginComponent } from './core/components/login/login.component';
-import { SignupComponent } from './core/components/signup/signup.component';
+
+// Components
+import { ForgetPasswordComponent } from './auth/components/forget-password/forget-password.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { SignupComponent } from './auth/components/signup/signup.component';
 
 const routes: Routes = [
     {
