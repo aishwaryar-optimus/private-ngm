@@ -10,13 +10,15 @@ import { SignupComponent } from './core/components/signup/signup.component';
 import { ForgetPasswordComponent } from './core/components/forget-password/forget-password.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
