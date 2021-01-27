@@ -18,7 +18,7 @@ const routes: Routes = [
         component: ForgetPasswordComponent,
     },
     {
-        path: 'fleet-view',
+        path: 'home',
         loadChildren: () => import('./fleet-view/fleet-view.module').then(m => m.FleetViewModule)
     },
     {

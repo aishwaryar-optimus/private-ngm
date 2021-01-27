@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       ],
       password: ['', [Validators.required]]
     });
-    this.auth.handleAuthentication();
+    // this.auth.handleAuthentication();
   }
 
   ngOnInit(): void {

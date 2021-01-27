@@ -84,7 +84,7 @@ export class AuthService {
     localStorage.removeItem('scopes');
     // this.unscheduleRenewal();
     // Go back to the home route
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
 
   public signup(formValue: any): void {
