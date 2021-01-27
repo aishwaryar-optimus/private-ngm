@@ -1,0 +1,67 @@
+<div class="mainContainer">
+  <div class="container tableContainer">
+    <div class="row pt-2">
+      <nav class="navbar pb-0 col">
+        <div class="container">
+          <div class="">
+            <a class="pointer action-button mr-2" (click)="gotoPreviousPage()">
+              <i class="bi bi-house-fill mr-1"></i>
+              <span>Sites</span>
+            </a>
+            <span class="action-button mr-2">
+              Site 1
+            </span>
+            <a class="pointer action-button">
+              <select class="summary-form-field pointer" (change)="navigateTo($event.target.value)">
+                <option value="../site-summary">Summary</option>
+                <option value="../summary-table" selected>Channels</option>
+              </select>
+            </a>
+          </div>
+
+          <!-- right side icons -->
+          <div class="ml-auto inline-flex pointer align-self-start">
+            <i class="bi bi-download mr-4 main-content-small-icon"></i>
+            <i class="bi bi-gear-fill main-content-small-icon"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="row pt-4">
+      <div class="col">
+        <div class="table-responsive-md ">
+          <table class="table table-hover table-striped text-center site-table">
+            <thead>
+              <tr class="table-dark">
+                <th>Channel</th>
+                <th>Mode</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Serial</th>
+                <th>Height</th>
+                <th>Boom Bearing</th>
+                <th>Scale</th>
+                <th>Offset</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="channelData.length > 0">
+              <tr *ngFor="let channel of channelData">
+                <td>{{ channel.channel_name }}</td>
+                <td>{{ channel.mode }}</td>
+                <td>{{ channel.type }}</td>
+                <td>{{ channel.description }}</td>
+                <td>{{ channel.serial }}</td>
+                <td>{{ channel.height }}</td>
+                <td>{{ channel.boom_bearing }}</td>
+                <td>{{ channel.scale }}</td>
+                <td>{{ channel.offset }}</td>
+                <td>{{ channel.units }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,11 @@
-<p>charting works!</p>
+<highcharts-chart *ngIf="chartType === 'line'" [id]="id" [Highcharts]="Highcharts" [constructorType]="chartConstructor"
+  [options]="chartOptions" [callbackFunction]="chartCallback" [(update)]="updateFlag" [oneToOne]="oneToOneFlag"
+  [runOutsideAngular]="runOutsideAngularFlag"></highcharts-chart>
+
+<highcharts-chart *ngIf="chartType === 'polar'" [id]="id" [Highcharts]="Highcharts" [constructorType]="chartConstructor"
+  [options]="chartOptions" [callbackFunction]="chartCallback" [(update)]="updateFlag" [oneToOne]="oneToOneFlag"
+  [runOutsideAngular]="runOutsideAngularFlag"></highcharts-chart>
+
+<highcharts-chart *ngIf="chartType === 'area'" [id]="id" [Highcharts]="Highcharts" [constructorType]="chartConstructor"
+  [options]="chartOptions" [callbackFunction]="chartCallback" [(update)]="updateFlag" [oneToOne]="oneToOneFlag"
+  [runOutsideAngular]="runOutsideAngularFlag"></highcharts-chart>

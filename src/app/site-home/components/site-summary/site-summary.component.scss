@@ -1,0 +1,28 @@
+$themeFontColor: #0e89df;
+$normalTextSize: 14px;
+$headingColor: #60a8c4;
+$primaryBackground: #f1f9ff;
+$secondaryBackground: #eeeeee;
+
+//CSS for all the chart headings
+.heading {
+  color: $headingColor;
+  text-align: center;
+}
+
+.site-summary {
+  color: $themeFontColor;
+
+  p:not(.small) {
+    margin: 0;
+    font-size: $normalTextSize;
+  }
+}
+
+.summary-row {
+  background: $primaryBackground;
+}
+
+.other-row {
+  background: $secondaryBackground;
+}
