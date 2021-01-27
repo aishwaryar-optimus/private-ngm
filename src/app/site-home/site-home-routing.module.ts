@@ -6,6 +6,8 @@ import { AddSiteComponent } from './components/add-site/add-site.component';
 import { SiteConfigurationComponent } from './components/site-configuration/site-configuration.component';
 import { SiteDashboardComponent } from './components/site-dashboard/site-dashboard.component';
 import { SiteSummaryComponent } from './components/site-summary/site-summary.component';
+import { SummaryTableComponent } from './components/site-summary/summary-table/summary-table.component';
+import { ChannelTableComponent } from './components/site-summary/channel-table/channel-table.component';
 
 const routes: Routes = [
   {
@@ -26,8 +28,15 @@ const routes: Routes = [
   }, {
     path: 'site-configuration',
     component: SiteConfigurationComponent
+  },
+  {
+    path: 'summary-table',
+    component: SummaryTableComponent
+  },
+  {
+    path: 'channel-table',
+    component: ChannelTableComponent
   }
-
 ];
 
 @NgModule({

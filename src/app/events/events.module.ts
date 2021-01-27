@@ -5,7 +5,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventsRoutingModule } from './events-routing.module';
 import { HistoricalEventsComponent } from './components/historical-events/historical-events.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HistoricalEventsComponent],
@@ -13,7 +14,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     EventsRoutingModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    NgxDaterangepickerMd.forRoot()
   ]
 })
-export class EventsModule { }
+export class EventsModule {}

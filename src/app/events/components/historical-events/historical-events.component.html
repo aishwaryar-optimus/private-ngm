@@ -2,16 +2,19 @@
   <div class="row pt-2">
     <nav class="navbar pb-0 col">
       <div class="container">
-        <h5 class="bolder theme_color">Events</h5>
-        <div class="ml-auto inline-flex">
-          <a class="mr-3 pointer">
-            <select class="form-control initial_width" name="site" id="">
-              <option value="">11/01/2021 - 21/01/2021</option>
-            </select>
+        <div class="">
+          <a class="h6 pointer">
+            Events
           </a>
-          <a class="mr-3 pointer">
-            <i class="theme_color">icon</i>
-          </a>
+        </div>
+        <!-- right side icons -->
+        <div class="ml-auto inline-flex pointer align-self-start">
+          <div class="action-button mr-4">
+            <input type="text" ngxDaterangepickerMd [(ngModel)]="selected" class="mr-1 summary-form-field"
+              [opens]="opens" [drops]="drops" (datesUpdated)="datesUpdated($event)" />
+            <i class="bi bi-calendar3 main-content-small-icon"></i>
+          </div>
+          <i class="bi bi-download mr-4 main-content-small-icon disabled"></i>
         </div>
       </div>
     </nav>
@@ -29,22 +32,21 @@
               <th width="35%">Details</th>
             </tr>
           </thead>
-          <tbody *ngIf="siteData.length > 0">
-            <tr *ngFor="let site of siteData; let i = index" class="pointer">
-              <td>{{site.last_connection | date: 'dd/MM/yyy hh:mm'}}
-                <!-- <div *ngIf="i === 2" style="height: 100px;"></div> -->
+          <tbody *ngIf="eventTableData.length > 0">
+            <tr *ngFor="let event of eventTableData; let i = index" class="pointer">
+              <td>{{event.date_time | date: 'dd/MM/yyy hh:mm'}}
               </td>
-              <td>{{site.project_name}}</td>
-              <td>{{site.site_name}}</td>
-              <td>{{site.category}}</td>
+              <td>{{event.project}}</td>
+              <td>{{event.site}}</td>
+              <td>{{event.category}}</td>
               <td class="accordion-cell">
                 <ngb-accordion>
                   <ngb-panel>
                     <ng-template ngbPanelHeader let-opened="opened" ngbPanelToggle>
-                      <button class="header-button" ngbPanelToggle>{{site.details}}</button>
+                      <button class="header-button" ngbPanelToggle>{{event.details}}</button>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                      {{site.details}}
+                      {{event.details}}
                     </ng-template>
                   </ngb-panel>
                 </ngb-accordion>

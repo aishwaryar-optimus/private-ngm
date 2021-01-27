@@ -1,10 +1,12 @@
 $themeFontColor: #0e89df;
 $normalTextSize: 14px;
-//CSS for all the chart headings
+$headingColor: #60a8c4;
+$primaryBackground: #f1f9ff;
+$secondaryBackground: #eeeeee;
 
+//CSS for all the chart headings
 .heading {
-  color: #60a8c4;
-  font-family: 'Arial Narrow', sans-serif;
+  color: $headingColor;
   text-align: center;
 }
 
@@ -15,4 +17,12 @@ $normalTextSize: 14px;
     margin: 0;
     font-size: $normalTextSize;
   }
+}
+
+.summary-row {
+  background: $primaryBackground;
+}
+
+.other-row {
+  background: $secondaryBackground;
 }

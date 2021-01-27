@@ -1,0 +1,81 @@
+<div class="mainContainer">
+  <div class="container tableContainer">
+    <div class="row pt-2">
+      <nav class="navbar pb-0 col">
+        <div class="container">
+          <div class="">
+            <a class="pointer action-button mr-2" (click)="gotoPreviousPage()">
+              <i class="bi bi-house-fill mr-1"></i>
+              <span>Sites</span>
+            </a>
+            <span class="action-button mr-2">
+              Site 1
+            </span>
+            <a class="pointer action-button">
+              <select class="summary-form-field pointer" (change)="navigateTo($event.target.value)">
+                <option value="../site-summary">Summary</option>
+                <option value="../summary-table" selected>Channels</option>
+              </select>
+            </a>
+          </div>
+
+          <!-- right side icons -->
+          <div class="ml-auto inline-flex pointer align-self-start">
+            <i class="bi bi-download mr-4 main-content-small-icon"></i>
+            <i class="bi bi-gear-fill main-content-small-icon"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="row pt-4">
+      <div class="col">
+        <div class="table-responsive-md ">
+          <table class="table table-hover table-striped text-center site-table">
+            <thead>
+              <tr class="table-dark">
+                <th width="">Channel</th>
+                <th width="">Description</th>
+                <th width="">Longest Static Run (min)</th>
+                <th width="">Units</th>
+                <th width="">Avg</th>
+                <th width="">Min</th>
+                <th width="">Max</th>
+                <th width="">Total Meas</th>
+                <th width="">Flag Qty</th>
+                <th width="">Flag Type</th>
+                <th width="">Availability</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="summaryTableData.length > 0">
+              <tr *ngFor="let channel of summaryTableData" [routerLink]="['../channel-table']">
+                <td>{{ channel.channel_name }}</td>
+                <td>{{ channel.description }}</td>
+                <td>{{ channel.longest_static_run }}</td>
+                <td>{{ channel.units }}</td>
+                <td>{{ channel.avg }}</td>
+                <td>{{ channel.min }}</td>
+                <td>{{ channel.max }}</td>
+                <td>{{ channel.total_meas }}</td>
+                <td>{{ channel.flag_qty }}</td>
+                <td>{{ channel.flag_type }}</td>
+                <td>{{ channel.availability }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="ml-auto inline-flex">
+        <div class="btn-group btn-group-toggle">
+          <button routerLink="site-summary" class="btn btn-special">
+            <i class="bi bi-bar-chart-fill"></i>
+          </button>
+
+          <button [routerLink]="['../summary-table']" class="btn btn-special">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div> -->

@@ -2,20 +2,34 @@
   <div class="container">
     <div class="row pt-2">
       <nav class="navbar pb-0 col">
+        <!-- There will be a common component for this part in future -->
         <div class="container">
-          <a class="h6 pointer">
-            Summary
-          </a>
-          <!-- <div class="ml-auto inline-flex">
-            <a class="mr-3 pointer">
-              <select class="form-control initial_width" name="site" id="">
-                <option value="">View All</option>
+          <div class="">
+            <a class="pointer action-button mr-2" (click)="gotoPreviousPage()">
+              <i class="bi bi-house-fill mr-1"></i>
+              <span>Sites</span>
+            </a>
+            <span class="action-button mr-2">
+              Site 1
+            </span>
+            <a class="pointer action-button">
+              <select class="summary-form-field pointer" (change)="navigateTo($event.target.value)">
+                <option value="../site-summary" selected>Summary</option>
+                <option value="../summary-table">Channels</option>
               </select>
             </a>
-            <a class="mr-3 pointer">
-              <button routerLink="add-site" class="btn btn-special">ADD SITE</button>
-            </a>
-          </div> -->
+          </div>
+
+          <!-- right side icons -->
+          <div class="ml-auto inline-flex align-self-start">
+            <div class="action-button mr-4 pointer">
+              <input type="text" ngxDaterangepickerMd [(ngModel)]="selected" class="mr-1 summary-form-field pointer"
+                [opens]="opens" [drops]="drops" (datesUpdated)="datesUpdated($event)" />
+              <i class="bi bi-calendar3 main-content-small-icon"></i>
+            </div>
+            <i class="bi bi-download mr-4 main-content-small-icon text-muted"></i>
+            <i class="bi bi-gear-fill main-content-small-icon  pointer"></i>
+          </div>
         </div>
       </nav>
     </div>
@@ -25,7 +39,7 @@
       <!-- left side of the page -->
       <div class="col">
         <!-- row1 -->
-        <div class="row my-3 p-4" style="background: #f1f9ff;">
+        <div class="row my-3 p-4 summary-row">
           <div class="col-sm-6 p-0 site-summary">
             <h5>SymPRO Crow's Nest</h5>
             <p class="small">0001001</p>
@@ -35,7 +49,7 @@
             <p>Longitude: 44338</p>
             <p>Latitude: -73.111</p>
             <p>Elevation: 122m</p>
-            <p>Time Zone: UTC -5:00 </p>
+            <p>Time Zone: UTC -5:00</p>
           </div>
 
           <div class="col-sm-6 p-0">
@@ -44,7 +58,7 @@
         </div>
         <!-- row2 -->
         <h6 class="heading">Monthly Average Temperature</h6>
-        <div class="row my-3 p-4" style="background: #eeeeee;">
+        <div class="row my-3 p-4 other-row">
           <app-charting [id]="'line_1'" [chartConstructor]="'chart'" [oneToOneFlag]="oneToOneFlag"
             [chartOptions]="chartOptionsOne" [chartType]="'line'" [dataChange]="dataChange">
           </app-charting>
@@ -55,7 +69,7 @@
       <div class="col mt-5">
         <!-- row1 -->
         <h6 class="heading">Wind Direction</h6>
-        <div class="p-4 my-3" style="background: #eeeeee;">
+        <div class="p-4 my-3 other-row">
           <app-charting [id]="'polar_1'" [chartConstructor]="'chart'" [oneToOneFlag]="oneToOneFlag"
             [chartOptions]="chartOptionsTwo" [chartType]="'polar'" [dataChange]="dataChange">
           </app-charting>
@@ -63,7 +77,7 @@
         <!-- row2 -->
 
         <h6 class="heading">Humidity</h6>
-        <div class="p-4 my-3" style="background: #eeeeee;">
+        <div class="p-4 my-3 other-row">
           <app-charting [id]="'area_1'" [chartConstructor]="'chart'" [oneToOneFlag]="oneToOneFlag"
             [chartOptions]="chartOptionsThree" [chartType]="'area'" [dataChange]="dataChange">
           </app-charting>

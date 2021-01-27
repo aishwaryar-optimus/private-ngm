@@ -9,6 +9,9 @@ import { SharedModule } from '../shared/shared.module';
 import { AddSiteComponent } from './components/add-site/add-site.component';
 import { SiteConfigurationComponent } from './components/site-configuration/site-configuration.component';
 import { SiteSummaryComponent } from './components/site-summary/site-summary.component';
+import { SummaryTableComponent } from './components/site-summary/summary-table/summary-table.component';
+import { ChannelTableComponent } from './components/site-summary/channel-table/channel-table.component';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { AddSiteStepOneComponent } from './components/add-site-step-one/add-site-step-one.component';
 import { AddSiteStepTwoComponent } from './components/add-site-step-two/add-site-step-two.component';
 
@@ -18,6 +21,8 @@ import { AddSiteStepTwoComponent } from './components/add-site-step-two/add-site
     AddSiteComponent,
     SiteConfigurationComponent,
     SiteSummaryComponent,
+    SummaryTableComponent,
+    ChannelTableComponent,
     AddSiteStepOneComponent,
     AddSiteStepTwoComponent
   ],
@@ -26,7 +31,8 @@ import { AddSiteStepTwoComponent } from './components/add-site-step-two/add-site
     SiteHomeRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxDaterangepickerMd.forRoot()
   ]
 })
-export class SiteHomeModule { }
+export class SiteHomeModule {}

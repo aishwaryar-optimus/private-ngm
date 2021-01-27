@@ -1,4 +1,4 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 $fontFamily: "Avenir LT Std 65 Medium";
 $bodyBg: #fafafa;
@@ -11,6 +11,8 @@ $secondaryColor: #f1f8fe;
 $inputBGColor: #f1f9ff;
 $borderColor: #bce0fd;
 $highlightedBgColor: #64b8f8;
+$backgroundColor: #f1f9ff;
+$smallIconsFontSize: 16px;
 
 .theme_color {
   color: $themeColor;
@@ -174,3 +176,32 @@ $highlightedBgColor: #64b8f8;
   font-weight: 700;
   color: $themeColor;
 }
+
+// site summary and related pages css starts
+.action-button {
+  border: 1px solid $borderColor;
+  background: $backgroundColor;
+  padding: 4px;
+  color: $themeColor;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.summary-form-field {
+  border: none;
+  background: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+.main-content-small-icon {
+  font-size: $smallIconsFontSize;
+  color: $themeColor;
+}
+
+div.md-drppicker.double {
+  left: auto;
+  right: 8px;
+}
+
+// site summary and related pages css end
