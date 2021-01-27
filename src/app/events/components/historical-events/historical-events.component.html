@@ -1,1 +1,52 @@
-<p>historical-events works!</p>
+<div class="mainContainer">
+  <div class="container tableContainer">
+    <div class="row pt-2">
+      <nav class="navbar pb-0 col">
+        <div class="container">
+          <div class="">
+            <a class="h6 pointer">
+              Events
+            </a>
+          </div>
+
+          <!-- right side icons -->
+          <div class="ml-auto inline-flex pointer align-self-start">
+            <div class="action-button mr-4">
+              <input type="text" ngxDaterangepickerMd [(ngModel)]="selected" class="mr-1 summary-form-field"
+                [opens]="opens" [drops]="drops" (datesUpdated)="datesUpdated($event)" />
+              <i class="bi bi-calendar3 main-content-small-icon"></i>
+            </div>
+            <i class="bi bi-download mr-4 main-content-small-icon disabled"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row pt-4">
+      <div class="col">
+        <div class="table-responsive-md ">
+          <table class="table table-hover table-striped text-center site-table">
+            <thead>
+              <tr class="table-dark">
+                <th width="">Date/Time</th>
+                <th width="">Project</th>
+                <th width="">Site</th>
+                <th width="">Category</th>
+                <th width="">Details</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="eventTableData.length > 0">
+              <tr *ngFor="let channel of eventTableData">
+                <td>{{ channel.date_time }}</td>
+                <td>{{ channel.project }}</td>
+                <td>{{ channel.site }}</td>
+                <td>{{ channel.category }}</td>
+                <td class="accordian-element">{{ channel.details }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
