@@ -9,7 +9,7 @@ interface AuthConfig {
 
 export const AUTH_CONFIG: AuthConfig = {
   clientID: '',
-  domain: '',
+  domain: ' ',
   callbackURL: 'http://localhost:4200',
   silentCallbackURL: 'http://localhost:3001/silent',
   audience: '{API_IDENTIFIER}',
