@@ -10,7 +10,7 @@ $themeFontColor: #0e89df;
 $secondaryColor: #f1f8fe;
 $inputBGColor: #f1f9ff;
 $borderColor: #bce0fd;
-
+$highlightedBgColor: #64b8f8;
 
 .theme_color {
   color: $themeColor;
@@ -122,13 +122,44 @@ $borderColor: #bce0fd;
 
   td {
     border: 2px solid white;
-    padding: 4px !important;
+    padding: 4px;
     background: #f1f9ff;
     font-size: 12px;
     font-weight: 600;
     color: $themeFontColor;
   }
+
+  tr:focus {
+    outline: none;
+  }
 }
+
+.highlightedCell {
+  background-color: $highlightedBgColor !important;
+  color: white !important;
+}
+
+.accordion-cell {
+  padding: 0 !important;
+
+  .card {
+    border: none;
+    border-radius: 0;
+    .card-header {
+      padding: 4px !important;
+      border: none !important;
+      background: $highlightedBgColor !important;
+
+      button {
+        color: white;
+        border: none !important;
+        width: 100% !important;
+        background: $highlightedBgColor !important;
+      }
+    }
+  }
+}
+
 
 .doted-border-div {
   border: 2px dotted $themeColor;

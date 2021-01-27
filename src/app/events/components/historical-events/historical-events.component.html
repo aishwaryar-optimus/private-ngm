@@ -1,1 +1,58 @@
-<p>historical-events works!</p>
+<div class="container tableContainer">
+  <div class="row pt-2">
+    <nav class="navbar pb-0 col">
+      <div class="container">
+        <h5 class="bolder theme_color">Events</h5>
+        <div class="ml-auto inline-flex">
+          <a class="mr-3 pointer">
+            <select class="form-control initial_width" name="site" id="">
+              <option value="">11/01/2021 - 21/01/2021</option>
+            </select>
+          </a>
+          <a class="mr-3 pointer">
+            <i class="theme_color">icon</i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="row pt-4">
+    <div class="col">
+      <div class="table-responsive-md ">
+        <table class="table table-hover table-striped text-center site-table">
+          <thead>
+            <tr class="table-dark">
+              <th width="10%">Date/Time </th>
+              <th width="10%">Project </th>
+              <th width="8%">Site </th>
+              <th width="15%">Category </th>
+              <th width="35%">Details</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="siteData.length > 0">
+            <tr *ngFor="let site of siteData; let i = index" class="pointer">
+              <td>{{site.last_connection | date: 'dd/MM/yyy hh:mm'}}
+                <!-- <div *ngIf="i === 2" style="height: 100px;"></div> -->
+              </td>
+              <td>{{site.project_name}}</td>
+              <td>{{site.site_name}}</td>
+              <td>{{site.category}}</td>
+              <td class="accordion-cell">
+                <ngb-accordion>
+                  <ngb-panel>
+                    <ng-template ngbPanelHeader let-opened="opened" ngbPanelToggle>
+                      <button class="header-button" ngbPanelToggle>{{site.details}}</button>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                      {{site.details}}
+                    </ng-template>
+                  </ngb-panel>
+                </ngb-accordion>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

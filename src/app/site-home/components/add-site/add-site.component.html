@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-3">
+  <div class="col-12">
     <nav class="navbar pb-0 col">
       <div>
         <button class="btn btn-secondary "> Sites > </button>
@@ -7,112 +7,93 @@
       </div>
     </nav>
   </div>
-  <div class="col-sm-6">
-    <div class="p-5">
-      <h6 class="theme_color bolder">New Site</h6>
-      <p class="theme_color bold">solar</p>
-
-      <div>
-        <form [formGroup]="siteForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label class="input_label">Number</label>
-            <input type="email" class="form-control" formControlName="email">
-          </div>
-
-          <div class="form-group">
-            <label class="input_label">Description</label>
-            <input type="email" class="form-control" formControlName="email">
-          </div>
-
-          <div class="form-group">
-            <label class="input_label">Project</label>
-            <input type="email" class="form-control" formControlName="email">
-          </div>
-
-          <div class="form-group">
-            <label class="input_label">Tower</label>
-            <input type="email" class="form-control" formControlName="email">
-          </div>
-
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <label class="input_label">Commission Date</label>
-                <input type="email" class="form-control" formControlName="email">
+  <div class="row col-12 justify-content-center">
+    <div class="col-sm-5">
+      <div class="p-5">
+        <h6 class="theme_color bolder">New Site</h6>
+        <p class="theme_color bold">solar</p>
+        <div>
+          <form [formGroup]="siteForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label class="input_label">Number</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group">
+              <label class="input_label">Description</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group">
+              <label class="input_label">Project</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="form-group">
+              <label class="input_label">Tower</label>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="input_label">Commission Date</label>
+                  <input type="email" class="form-control" formControlName="email">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="input_label">Units</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
               </div>
             </div>
-
-            <div class="col-6">
-              <div class="form-group">
-                <label class="input_label">Units</label>
-                <input type="password" class="form-control" formControlName="password">
+            <hr class="theme-hr">
+            <h6 class="theme_color bolder">Location</h6>
+            <div class="form-group">
+              <label class="input_label">Description</label>
+              <input type="password" class="form-control" formControlName="password">
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="input_label">Latitude</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="form-group">
+                  <label class="input_label">Longitude</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="form-group">
+                  <label class="input_label">Elevation</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="form-group">
+                  <label class="input_label">Time Zone</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
+              </div>
+              <div class="col-8 pt-3">
+                <!-- <agm-map [latitude]='lat' [longitude]='lng' [zoom]="zoom">
+                    <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
+                      [label]="m.label" [iconUrl]="iconUrl">
+                      <agm-info-window>
+                        <strong>InfoWindow content</strong>
+                      </agm-info-window>
+                    </agm-marker>
+                  </agm-map> -->
               </div>
             </div>
-          </div>
-
-
-          <hr class="theme-hr">
-          <h6 class="theme_color bolder">Location</h6>
-
-          <div class="form-group">
-            <label class="input_label">Description</label>
-            <input type="password" class="form-control" formControlName="password">
-          </div>
-
-          <div class="row">
-            <div class="col-4">
-
-              <div class="form-group">
-                <label class="input_label">Latitude</label>
-                <input type="password" class="form-control" formControlName="password">
-              </div>
-
-              <div class="form-group">
-                <label class="input_label">Longitude</label>
-                <input type="password" class="form-control" formControlName="password">
-              </div>
-
-              <div class="form-group">
-                <label class="input_label">Elevation</label>
-                <input type="password" class="form-control" formControlName="password">
-              </div>
-
-              <div class="form-group">
-                <label class="input_label">Time Zone</label>
-                <input type="password" class="form-control" formControlName="password">
+            <hr class="theme-hr">
+            <h6 class="theme_color bolder">Data Encryption</h6>
+            <div class="form-group">
+              <label class="input_label">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+            </div>
+            <div class="row mt-5">
+              <div class="col-12">
+                <button class="btn btn-secondary ">Back</button>
+                <button class="btn btn-special float-right">Create</button>
               </div>
             </div>
-            <div class="col-8 pt-3">
-              <!-- <agm-map [latitude]='lat' [longitude]='lng' [zoom]="zoom">
-                <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
-                  [label]="m.label" [iconUrl]="iconUrl">
-                  <agm-info-window>
-                    <strong>InfoWindow content</strong>
-                  </agm-info-window>
-                </agm-marker>
-              </agm-map> -->
-            </div>
-          </div>
-
-
-          <hr class="theme-hr">
-          <h6 class="theme_color bolder">Data Encryption</h6>
-
-          <div class="form-group">
-            <label class="input_label">Password</label>
-            <input type="password" class="form-control" formControlName="password">
-          </div>
-
-
-          <div class="row mt-5">
-            <div class="col-12">
-              <button class="btn btn-secondary ">Back</button>
-
-              <button class="btn btn-special float-right">Create</button>
-            </div>
-          </div>
-
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>

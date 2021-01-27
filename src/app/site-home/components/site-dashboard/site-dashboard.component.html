@@ -34,7 +34,7 @@
               </tr>
             </thead>
             <tbody *ngIf="siteData.length > 0">
-              <tr *ngFor="let site of siteData" routerLink="site-summary">
+              <tr *ngFor="let site of siteData" routerLink="site-summary" class="pointer">
                 <td>{{site.project_name}}</td>
                 <td>{{site.site_name}}</td>
                 <td>{{site.instrumentation}}</td>
