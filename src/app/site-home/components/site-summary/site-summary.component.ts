@@ -37,13 +37,16 @@ export class SiteSummaryComponent {
   //function for navigation to any route
   navigateTo(value) {
     if (value) {
-      this.router.navigate([value], { relativeTo: this.activatedRoute });
+      this.router.navigate([value], {
+        relativeTo: this.activatedRoute,
+        skipLocationChange: true
+      });
     }
     return false;
   }
   //function to go back to previous route
-  gotoPreviousPage() {
-    this.location.back();
+  gotoSiteHomePage() {
+    this.router.navigate(['../site-home'], { replaceUrl: true });
   }
 
   //Function to render Line Chart
