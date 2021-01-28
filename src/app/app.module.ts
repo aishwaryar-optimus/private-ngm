@@ -1,34 +1,31 @@
+// Core Modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
-import { LoginComponent } from './core/components/login/login.component';
-import { SignupComponent } from './core/components/signup/signup.component';
-import { ForgetPasswordComponent } from './core/components/forget-password/forget-password.component';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AgmCoreModule } from '@agm/core';
+
+// Application Module
+import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
+
+// Components and Services
+import { AppComponent } from './app.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignupComponent,
-    ForgetPasswordComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    AuthModule,
+    BrowserModule,
     CoreModule,
-    SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    AgmCoreModule.forRoot({
-    })
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

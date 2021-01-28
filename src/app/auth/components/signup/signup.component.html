@@ -8,7 +8,7 @@
                     <div class="form-group">
                         <label class="input_label">E-mail</label>
                         <input type="email" class="form-control" placeholder="Email Address" formControlName="email">
-                        <div *ngIf="submittedmsg && signupForm.controls.email.errors" class="error">
+                        <div *ngIf="submittedMsg && signupForm.controls.email.errors" class="error">
                             <div *ngIf="signupForm.controls.email.errors.required">
                                 This field is required
                             </div>
@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label class="input_label">Name</label>
                         <input type="text" class="form-control" placeholder="Enter Name" formControlName="firstName">
-                        <div *ngIf="submittedmsg && signupForm.controls.firstName.errors" class="error">
+                        <div *ngIf="submittedMsg && signupForm.controls.firstName.errors" class="error">
                             <div *ngIf="signupForm.controls.firstName.errors.required">
                                 This field is required
                             </div>
@@ -32,7 +32,7 @@
                         <label class="input_label">Password</label>
                         <input type="password" class="form-control" placeholder="Enter Password"
                             formControlName="lastName">
-                        <div *ngIf="submittedmsg && signupForm.controls.lastName.errors" class="error">
+                        <div *ngIf="submittedMsg && signupForm.controls.lastName.errors" class="error">
                             <div *ngIf="signupForm.controls.lastName.errors.required">
                                 This field is required
                             </div>
